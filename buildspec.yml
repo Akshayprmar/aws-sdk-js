@@ -1,14 +1,6 @@
 version: 0.2
 
-env:
-  variables:
-    AWS_REGION: "us-west-2"
-    CHROME_BIN: "/usr/bin/chromium-browser"
-
 phases:
-  install:
-    runtime-versions:
-      nodejs: 12
   pre_build:
     commands:
       - echo Install npm dependencies
