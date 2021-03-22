@@ -12,12 +12,7 @@ phases:
   pre_build:
     commands:
       - echo Install npm dependencies
-      - npm install
-      - gem install rake
   build:
     commands:
       - echo Running Test
-      - npm run test
-  post_build:
-    commands:
-      - ./node_modules/.bin/codecov -f coverage/*.json -t e89a5f73-fd56-45de-8799-009a19bde63c
+      - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
